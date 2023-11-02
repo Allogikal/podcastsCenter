@@ -1,0 +1,65 @@
+/* HEADER_CSS */
+
+header {
+    width: 90%;
+    height: 5.75rem;
+    margin-top: 3.75rem;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #000000, #FFFFFF, #FFFFFF, #000000, #000000, #000000, #FFFFFF, #FFFFFF, #000000) 1;
+    border-image-slice: 1;
+}
+
+sub {
+    margin-top: 0.65rem;
+    color: #9A9A9A;
+    text-align: center;
+    font-size: 0.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    height: 3.22rem;
+    padding: 1.27rem 0;
+}
+
+ul {
+    width: 90%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.375rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    list-style: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.125rem;
+    border-radius: 3.125rem;
+}
+
+li:nth-child(1):hover,
+li:nth-child(2):hover,
+li:nth-child(4):hover,
+li:nth-child(5):hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}

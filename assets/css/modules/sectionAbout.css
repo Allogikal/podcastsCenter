@@ -1,0 +1,118 @@
+/* STYLES FOR SECTION_ABOUT_CSS */
+
+.about {
+    width: 80%;
+    padding: 5rem 0;
+    display: inline-flex;
+}
+
+.about_first {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.about_first div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_first div:nth-child(1) p {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.about_first div:nth-child(2) {
+    justify-content: center;
+}
+
+.about_first div img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 25rem;
+    border: 1px dashed var(--text-special);
+    box-shadow: -10px 10px 0px 3px var(--text-special);
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.about_first div h1 {
+    text-align: center;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.13125rem;
+    text-transform: uppercase;
+}
+
+.about_first div p {
+    width: 35%;
+    text-align: right;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.125rem;
+}
+
+.about_second,
+.about_third {
+    display: flex;
+    width: 20%;
+}
+
+.about_second {
+    padding-top: 5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ACTIVE CLASS FOR JS SLIDER */
+.active { background-color: var(--text-special); }
+
+.about_second div span {
+    border-radius: 7rem;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--text-special);
+}
+
+.about_second div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+}
+
+.about_second div div:nth-child(1) img {
+    cursor: pointer;
+    transform: rotate(-90deg); 
+}
+
+.about_second div div:nth-child(7) img {
+    cursor: pointer;
+    transform: rotate(90deg); 
+}
+
+.about_third {
+    justify-content: center;
+    align-items: center;
+}
+
+.about_third h1 {
+    text-align: center;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.39375rem;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #FFF 51.98%, var(--text-special) 102.14%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotate(90deg);
+    white-space: nowrap; 
+}

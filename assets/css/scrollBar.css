@@ -1,0 +1,15 @@
+/* EDITING SCROLLBAR GLOBAL!!! - CHROMIUM */
+
+html { scroll-behavior: smooth; }
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-special);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: var(--text-special);
+}

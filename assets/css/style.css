@@ -1,5 +1,53 @@
-.container {
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* CSS FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap');
+/* @import STYLES_CSS */
+@import './variables.css';
+@import './scrollBar.css';
+@import './modules/header.css';
+@import './modules/articleInfo.css';
+@import './modules/sectionAbout.css';
+@import './modules/sectionPodcasts.css';
+@import './modules/sectionSearch.css';
+@import './modules/footer.css';
+
+* {
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease-in-out;
 }
+
+span { color: var(--text-special); }
+
+/* STYLES FOR BODY_CSS */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 100vw;
+    justify-items: center;
+    color: var(--main-color);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+/* STYLES FOR SCROLL_DOWN_CSS */
+
+.scroll_down {
+    position: fixed;
+    top: 75vh;
+    left: 0;
+    display: inline-flex;
+    column-gap: 1rem;
+    text-align: right;
+    font-size: 0.775rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 0.175rem;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+}
+
+.scroll_down p { margin: 0 0 5px 0; }
