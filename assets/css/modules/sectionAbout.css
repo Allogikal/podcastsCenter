@@ -8,9 +8,10 @@
 
 .about_first {
     width: 60%;
-    display: flex;
+    display: none;
     flex-direction: column;
     row-gap: 3rem;
+    animation: fade 5s ease-in-out;
 }
 
 .about_first div:nth-child(1) {
@@ -70,7 +71,7 @@
     align-items: flex-start;
 }
 
-/* ACTIVE CLASS FOR JS SLIDER */
+/* ACTIVE CLASS FOR JS SLIDESHOW */
 .active { background-color: var(--text-special); }
 
 .about_second div span {

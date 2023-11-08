@@ -1,8 +1,10 @@
 /* CSS FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&display=swap');
+
 /* @import STYLES_CSS */
 @import './variables.css';
 @import './scrollBar.css';
+@import './keyframes.css';
 @import './modules/header.css';
 @import './modules/articleInfo.css';
 @import './modules/sectionAbout.css';
@@ -10,7 +12,15 @@
 @import './modules/sectionSearch.css';
 @import './modules/footer.css';
 
-* {
+/* @import STYLES_FOR_MODALS_CSS */
+@import './includes/modalInfo.css';
+@import './includes/modalForAccessAP.css';
+@import './includes/modalForFormApplication.css';
+
+/* GLOBAL STYLES */
+
+*,
+input[type=checkbox]:checked + label::before {
     font-family: 'Inter', sans-serif;
     transition: all 0.2s ease-in-out;
 }

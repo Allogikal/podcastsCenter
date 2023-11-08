@@ -37,14 +37,13 @@ ul {
     padding: 0;
 }
 
-li {
+li a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 9.375rem;
     height: 2.5rem;
     flex-shrink: 0;
-    list-style: none;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.25rem;
@@ -55,11 +54,20 @@ li {
     border-radius: 3.125rem;
 }
 
-li:nth-child(1):hover,
-li:nth-child(2):hover,
-li:nth-child(4):hover,
-li:nth-child(5):hover {
+li {
+    list-style: none;
+}
+
+li:nth-child(1) a:hover,
+li:nth-child(2) a:hover,
+li:nth-child(4) a:hover,
+li:nth-child(5) a:hover {
     color: black;
     background-color: white;
     cursor: pointer;
+}
+
+.aElement {
+    text-decoration: none;
+    color: white;
 }

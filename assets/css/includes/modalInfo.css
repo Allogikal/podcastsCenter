@@ -1,0 +1,91 @@
+/* MODAL INFO ABOUT INTERVIEWER */
+
+.modal_inactive {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+}
+
+.modal_info__bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.51);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+}
+
+.modal_info {
+    width: 25rem;
+    height: 25rem;
+    border: 2px solid var(--text-special);
+    background: #0F0F0F;
+    box-shadow: 10px 10px var(--text-special);
+    position: fixed;
+    top: 20vh;
+    left: 40vw;
+    opacity: 0;
+    display: none;
+}
+
+#closeModalInfo,
+#closeModalAccess,
+#closeModalForm {
+    cursor: pointer;
+    position: relative;
+    left: 90%;
+    top: 5%;
+}
+
+.modal_info div {
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.modal_info div img {
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 9.375rem;
+    border: 1px dashed var(--text-special);
+    box-shadow: -10px 10px 0 3px var(--text-special);
+    object-fit: cover;
+}
+
+.modal_info div h2 {
+    margin: 2rem 0 0 0;
+    text-align: center;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.175rem;
+    text-transform: uppercase;
+}
+
+.modal_info div p:nth-child(3) {
+    margin: 0;
+    color: var(--text-special);
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.125rem;
+    text-decoration-line: underline;
+}
+
+.modal_info div p:nth-child(4) {
+    margin: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 0.0625rem;
+}

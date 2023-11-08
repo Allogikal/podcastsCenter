@@ -4,8 +4,8 @@ require '../database/dbConnect.php';
 $PDO = new PDOConnect();
 
 $title = $_POST['title'];
-$image_path = 'assets/uploads/images' . time() . $_FILES['image_file']['name'];
-$audio_path = 'assets/uploads/audio' . time() . $_FILES['audio_file']['name'];
+$image_path = '/uploads/images' . time() . $_FILES['image_file']['name'];
+$audio_path = '/uploads/audio' . time() . $_FILES['audio_file']['name'];
 
 if (!move_uploaded_file($_FILES['image_file']['tmp_name'], '../../' . $image_path)) {
     $_SESSION['message'] = 'НЕУДАЧА!';

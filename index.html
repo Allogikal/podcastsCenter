@@ -23,11 +23,11 @@ $PDO = new PDOConnect();
     <header>
         <nav>
             <ul>
-                <li>info</li>
-                <li>about</li>
+                <li><a class="aElement" href="#section1">info</a></li>
+                <li><a class="aElement" href="#section2">about</a></li>
                 <li><img src="./assets/images/logoImage.svg" alt="logoImage"></li>
-                <li>podcasts</li>
-                <li>search<sub>CTRL+F</sub></li>
+                <li><a class="aElement" href="#section3">podcasts</a></li>
+                <li><a class="aElement" href="#section4">search<sub>CTRL+F</sub></a></li>
             </ul>
         </nav>
     </header>
@@ -39,11 +39,11 @@ $PDO = new PDOConnect();
     </div>
 
     <!-- SECTION_INFO -->
-    <article>
+    <article id="section1">
         <div class="info_left">
             <h1>Lorem ipsum dolor sit <span>amet</span>, consectetur</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  ......</p>
-            <button>Submit application <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
+            <button id="openModalForm">Submit application <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
         </div>
         <div class="info_right">
             <img src="./assets/images/imageClip.jpg" alt="image">
@@ -59,8 +59,44 @@ $PDO = new PDOConnect();
     </svg>
 
     <!-- SECTION_ABOUT -->
-    <section class="about">
-        <div class="about_first">
+    <section id="section2" class="about">
+        <div class="about_first fade">
+            <div>
+                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  ......</p>
+            </div>
+            <div>
+                <h1>Lorem <span>ipsum</span> dolor sit amet </h1>
+            </div>
+        </div>
+        <div class="about_first fade">
+            <div>
+                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  ......</p>
+            </div>
+            <div>
+                <h1>Lorem <span>ipsum</span> dolor sit amet </h1>
+            </div>
+        </div>
+        <div class="about_first fade">
+            <div>
+                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  ......</p>
+            </div>
+            <div>
+                <h1>Lorem <span>ipsum</span> dolor sit amet </h1>
+            </div>
+        </div>
+        <div class="about_first fade">
+            <div>
+                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  ......</p>
+            </div>
+            <div>
+                <h1>Lorem <span>ipsum</span> dolor sit amet </h1>
+            </div>
+        </div>
+        <div class="about_first fade">
             <div>
                 <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  ......</p>
@@ -71,13 +107,13 @@ $PDO = new PDOConnect();
         </div>
         <div class="about_second">
             <div>
-                <div><img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></div>
-                <div><span class="active"></span></div>
-                <div><span></span></div>
-                <div><span></span></div>
-                <div><span></span></div>
-                <div><span></span></div>
-                <div><img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></div>
+                <div><img class="prevSlide" src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></div>
+                <div><span class="indicator"></span></div>
+                <div><span class="indicator"></span></div>
+                <div><span class="indicator"></span></div>
+                <div><span class="indicator"></span></div>
+                <div><span class="indicator"></span></div>
+                <div><img class="nextSlide" src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></div>
             </div>
         </div>
         <div class="about_third">
@@ -94,7 +130,7 @@ $PDO = new PDOConnect();
     </svg>
 
     <!-- SECTION_PODCASTS -->
-    <section class="podcasts">
+    <section id="section3" class="podcasts">
         <div class="podcasts_heading">
             <div>
                 <h1>Lorem ipsum dolor sit <span>amet elit</span></h1>
@@ -114,7 +150,7 @@ $PDO = new PDOConnect();
             <div class="podcasts_body__item">
                 <div>
                     <h2>Lorem ipsum dolor sit</h2>
-                    <p>@interviewer</p>
+                    <p class="openModalInfo">@interviewer</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ......</p>
                     <p>September 20, 2023 </p>
                 </div>
@@ -125,7 +161,7 @@ $PDO = new PDOConnect();
             <div class="podcasts_body__item reverse">
                 <div>
                     <h2>Lorem ipsum dolor sit</h2>
-                    <p>@interviewer</p>
+                    <p class="openModalInfo">@interviewer</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ......</p>
                     <p>September 20, 2023 </p>
                 </div>
@@ -143,7 +179,7 @@ $PDO = new PDOConnect();
     </svg>
 
     <!-- SECTION_SEARCH -->
-    <section class="search">
+    <section id="section4" class="search">
         <p>Enter a phrase to search for a podcast or interviewer</p>
         <search role="search">
             <input placeholder="SEARCH ..." type="search">
@@ -155,11 +191,60 @@ $PDO = new PDOConnect();
     <footer>
         <h2>paradigma</h2>
         <p>© 2023 ООО “ПАРАДИГМА”. Все права защищены</p>
-        <p>управляющим</p>
+        <p id="openModalAccess">управляющим</p>
     </footer>
 
-    <!-- MAIN SCRIPTS.JS -->
-    <script src="./assets/js/main.js"></script>
+    <!-- -------------------------------------------------->
+    <!--                     MODALS                      -->
+    <!-- -------------------------------------------------->
+    
+    <div id="modalBackground" class="modal_info__bg">
+
+        <div id="modalInfo" class="modal_info">
+            <img id="closeModalInfo" src="./assets/images/closeModalButton.svg" alt="closeModal">
+            <div>
+                <img src="./assets/images/imageClip.jpg" alt="imageInterviewer">
+                <h2>NAME SURNAME</h2>
+                <p>email123int@mail.ru</p>
+                <p>Country</p>
+            </div>
+        </div>
+
+        <div id="modalAccess" class="modal_access">
+            <img id="closeModalAccess" src="./assets/images/closeModalButton.svg" alt="closeModal">
+            <div>
+                <img src="./assets/images/logoAdminPanel.svg" alt="logoForAdminPanel">
+                <form action="#">
+                    <input placeholder="ACCESS PASSWORD" type="password">
+                    <button type="submit">get access <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
+                </form>
+            </div>  
+        </div>
+
+        <div id="modalForm" class="modal_form">
+            <img id="closeModalForm" src="./assets/images/closeModalButton.svg" alt="closeModal">
+            <div>
+                <img src="./assets/images/logoImage.svg" alt="logoForAdminPanel">
+                <form action="#">
+                    <input required placeholder="YOUR NAME" type="text" name="name">
+                    <input required placeholder="YOUR SURNAME" type="text" name="surname">
+                    <input required placeholder="YOUR COUNTRY" type="text" name="country">
+                    <input required placeholder="YOUR EMAIL" type="email" name="email">
+                    <textarea required placeholder="TOPIC FOR DISCUSSION" name="description"></textarea>
+                    <button type="submit">submit <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
+                    <div>
+                        <input required id="checkPolicy" type="checkbox">
+                        <label for="checkPolicy">You agree to the site's <a href="#!" target="_blank">privacy policy</a></label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MAIN SCRIPT.JS -->
+    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/modules/slideShow.js"></script>
 </body>
 
 </html>
