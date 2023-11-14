@@ -1,21 +1,20 @@
 /* MODAL FOR FORM THE APPLICATION TO NEW INTERVIEWER */
 
 .modal_form {
-    width: 32.6875rem;
-    height: 44.0625rem;
+    width: 30vw;
+    height: 90vh;
     border: 2px solid var(--text-special);
     background: #0F0F0F;
     box-shadow: 10px 10px var(--text-special);
     position: fixed;
-    left: 35vw;
     opacity: 0;
     display: none;
 }
 
 .modal_form input,
 .modal_form textarea {
-    width: 23.25rem;
-    height: 3.0625rem;
+    width: 70%;
+    height: 2.75rem;
     color: var(--text-secondary);
     font-size: 0.875rem;
     font-style: normal;
@@ -25,14 +24,15 @@
     background: #0F0F0F;
     border: 1px solid var(--text-special);
     outline: none;
-    padding-left: 1rem;
     resize: none;
 }
 
+.modal_form input {
+    padding-left: 1rem;
+}
+
 .modal_form textarea {
-    width: 23.25rem;
-    height: 5.8125rem;
-    padding-top: 1rem;
+    padding: 1rem 0 1rem 1rem;
 }
 
 .modal_form input[type=checkbox] {
@@ -42,13 +42,12 @@
 }
 
 .modal_form button {
+    width: 55%;
+    height: 3.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1.8rem;
-    width: 17.6875rem;
-    height: 4.4375rem;
-    flex-shrink: 0;
     border: 1px solid var(--text-special);
     background: #0F0F0F;    
     color: rgba(255, 255, 255, 0.80);
@@ -67,10 +66,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 1.2rem;
+    row-gap: 1.5rem;
+    padding-top: 0.4rem;
 }
 
 .modal_form div form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

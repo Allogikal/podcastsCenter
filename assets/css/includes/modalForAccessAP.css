@@ -1,14 +1,12 @@
 /* MODAL FOR ACCESS TO ADMIN PANEL */
 
 .modal_access {
-    width: 32.7rem;
-    height: 24.1rem;
+    width: 35vw;
+    height: 55vh;
     border: 2px solid var(--text-special);
     background: #0F0F0F;
     box-shadow: 10px 10px var(--text-special);
     position: fixed;
-    top: 20vh;
-    left: 35vw;
     opacity: 0;
     display: none;
 }
@@ -50,7 +48,7 @@
 }
 
 .modal_access div {
-    margin-top: 1.8rem;
+    margin-top: 1.1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,12 +56,16 @@
     row-gap: 2.63rem;
 }
 
+.logoAP {
+    width: 7.22vw;
+}
+
 .modal_access div form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 2.56rem;
+    row-gap: 2rem;
 }
 
 .modal_access button:hover,

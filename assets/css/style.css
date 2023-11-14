@@ -17,6 +17,9 @@
 @import './includes/modalForAccessAP.css';
 @import './includes/modalForFormApplication.css';
 
+/* MEDIA QUERIES */
+@import './media.css';
+
 /* GLOBAL STYLES */
 
 *,
@@ -61,3 +64,9 @@ body {
 }
 
 .scroll_down p { margin: 0 0 5px 0; }
+
+@media only screen and (max-width: 767px) {
+    .scroll_down {
+        display: none;
+    }
+}

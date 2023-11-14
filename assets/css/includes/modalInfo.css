@@ -11,21 +11,19 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.51);
     position: fixed;
-    top: 0;
-    left: 0;
     opacity: 0;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal_info {
-    width: 25rem;
-    height: 25rem;
+    width: 30vw;
+    height: 55vh;
     border: 2px solid var(--text-special);
     background: #0F0F0F;
     box-shadow: 10px 10px var(--text-special);
     position: fixed;
-    top: 20vh;
-    left: 40vw;
     opacity: 0;
     display: none;
 }
@@ -36,7 +34,7 @@
     cursor: pointer;
     position: relative;
     left: 90%;
-    top: 5%;
+    top: 2.222rem;
 }
 
 .modal_info div {

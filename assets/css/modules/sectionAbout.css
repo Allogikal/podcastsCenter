@@ -11,7 +11,7 @@
     display: none;
     flex-direction: column;
     row-gap: 3rem;
-    animation: fade 5s ease-in-out;
+    animation: fade .9s ease-in;
 }
 
 .about_first div:nth-child(1) {
@@ -87,12 +87,12 @@
     row-gap: 1.2rem;
 }
 
-.about_second div div:nth-child(1) img {
+.prevSlide {
     cursor: pointer;
     transform: rotate(-90deg); 
 }
 
-.about_second div div:nth-child(7) img {
+.nextSlide {
     cursor: pointer;
     transform: rotate(90deg); 
 }

@@ -1,43 +1,38 @@
-// SLIDER - SLIDESHOW_JS
-
 let slideIndex = 0;
 let indicators = document.querySelectorAll(".indicator");
 
 function updateIndicators() {
-    for (let i = 0; i < indicators.length; i++) {
-        indicators[i].classList.remove("active");
-    }
-    indicators[slideIndex - 1].classList.add("active");
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle("active", index === slideIndex);
+    });
 }
 
-showSlides();
+showSlide(slideIndex);
 
-function showSlides() {
-    let i;
+function showSlide(index) {
     let slides = document.getElementsByClassName("about_first");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "flex";
+    Array.from(slides).forEach(slide => slide.style.display = "none");
+    slideIndex = (index + slides.length) % slides.length;
+    slides[slideIndex].style.display = "flex";
     updateIndicators();
-    setTimeout(showSlides, 5000);
+}
+
+function nextSlide() {
+    showSlide(slideIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(slideIndex - 1);
 }
 
 let nextButton = document.querySelector(".nextSlide");
 let prevButton = document.querySelector(".prevSlide");
 
-nextButton.addEventListener("click", () => {
-    slideIndex++;
-    showSlides();
-});
+nextButton.addEventListener("click", nextSlide);
+prevButton.addEventListener("click", prevSlide);
 
-prevButton.addEventListener("click", () => {
-    slideIndex--;
-    showSlides();
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", () => showSlide(index));
 });
 
 indicators[0].classList.add("active");

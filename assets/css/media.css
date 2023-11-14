@@ -1,0 +1,410 @@
+/* Мобильные устройства */
+@media only screen and (max-width: 767px) {
+    header {
+        height: 35vh;
+        margin-top: 2rem;
+    }
+
+    nav {
+        height: 100%;
+        padding: 0;
+    }
+
+    sub {
+        display: none;
+    }
+
+    ul {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    ul li:nth-child(3) {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    li a {
+        width: 8.2rem;
+    }
+
+    article {
+        padding: 5rem 0;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2.875rem;
+    }
+
+    .info_left {
+        align-items: center;
+        width: 100%;
+        row-gap: 2rem;
+    }
+
+    .info_left p,
+    .info_left h1 {
+        text-align: center;
+        margin: 0;
+    }
+
+    .info_left h1 {
+        width: 100%;
+        font-size: 1.9rem;
+    }
+
+    .info_left p {
+        font-size: 0.9rem;
+        width: 90%;
+    }
+
+    .info_left button {
+        margin-right: 0;
+        width: 18rem;
+        height: 3.375rem;
+        font-size: 1rem;
+    }
+
+    .info_right {
+        width: 100%;
+    }
+
+    .info_right img {
+        width: 80%;
+        height: 20rem;
+    }
+
+    .svg_border_about {
+        width: 100vw;
+    }
+
+    .about {
+        display: flex;
+        width: 100%;
+        padding: 2rem 0;
+        flex-direction: column;
+    }
+
+    .about_first {
+        flex-direction: column-reverse;
+        width: 100%;
+        row-gap: 0;
+    }
+
+    .about_first div:nth-child(1) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.25rem;
+    }
+
+    .about_first div:nth-child(2) {
+        display: flex;
+    }
+
+    .about_first div img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .about_first div p {
+        width: 90%;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .about_first div h1 {
+        font-size: 1.9rem;
+        width: 90%;
+    }
+
+    .about_second {
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    .about_second div {
+        flex-direction: row;
+        row-gap: 0;
+        column-gap: 1.5rem;
+    }
+
+    .prevSlide {
+        transform: rotate(-180deg);
+    }
+
+    .nextSlide {
+        transform: rotate(0deg);
+    }
+
+    .about_third {
+        width: 100%;
+    }
+
+    .about_third h1 {
+        width: 90%;
+        white-space: inherit;
+        word-wrap: break-word;
+        transform: rotate(0deg);
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+
+    .podcasts {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .podcasts_heading {
+        flex-direction: column;
+    }
+
+    .podcasts_heading div:nth-child(1) {
+        width: 80%;
+    }
+
+    .podcasts_heading div:nth-child(1) h1 {
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 1.9rem;
+    }
+
+    .podcasts_heading div:nth-child(1) img {
+        position: relative;
+        bottom: 2rem;
+    }
+
+    .podcasts_heading div:nth-child(2) {
+        width: 80%;
+    }
+
+    .podcasts_heading div:nth-child(2) select {
+        width: 100%;
+        font-size: 0.955rem;
+        height: 3.55rem;
+    }
+
+    .podcasts_heading div:nth-child(2) img {
+        left: 85%;
+        bottom: 3.855rem
+    }
+
+    .podcasts_body {
+        grid-template-columns: 100vw;
+    }
+
+    .podcasts_body__item {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-self: center;
+        row-gap: 2rem;
+    }
+
+    .podcasts_body__item div:nth-child(2) img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .podcasts_body__item div:nth-child(1) {
+        width: 100%;
+    }
+
+    .podcasts_body__item div:nth-child(1) h2 {
+        font-size: 1.75rem;
+    }
+
+    .podcasts_body__item div:nth-child(1) p:nth-child(2),
+    .podcasts_body__item div:nth-child(1) p:nth-child(3) {
+        font-size: 1rem;
+    }
+
+    .podcasts_body__item div:nth-child(1) p:nth-child(3) {
+        width: 80%;
+    }
+
+    .podcasts_body__item div:nth-child(1) p:nth-child(4) {
+        font-size: 1rem;
+    }
+
+    .screen_podcasts__item_target {
+        width: 10rem;
+    }
+
+    .svg_decorate_search {
+        width: 80vw;
+    }
+
+    .search {
+        margin-bottom: 5rem;
+        width: 100%;
+    }
+
+    .search p {
+        text-align: center;
+        width: 80%;
+    }
+    
+    search input {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    search img {
+        right: 3rem;
+        width: 1.5rem;
+    }
+
+    search {
+        width: 90%;
+        padding-left: 1.67rem;
+    }
+
+    footer p:nth-child(2) {
+        font-size: 1rem;
+        width: 70%;
+    }
+
+    footer p:nth-child(3) {
+        display: none;
+    }
+
+    footer {
+        padding-bottom: 0;
+        justify-content: center;
+        row-gap: 2rem;
+    }
+
+    /* MODAL WINDOWS */
+
+    .modal_form {
+        width: 90vw;
+        height: 95vh;
+    }
+
+    .modal_form input, 
+    .modal_form textarea {
+        width: 70%;
+        height: 3.35rem;
+    }
+
+    .modal_form button {
+        width: 70%;
+        height: 4.125rem;
+        font-size: 1rem;
+    }
+
+    .modal_form div form div label {
+        width: 80%;
+    }
+
+    .modal_info {
+        width: 95vw;
+        height: 50vh;
+    }
+
+    .modal_info div img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .modal_info div h2 {
+        font-size: 1.4rem;
+    }
+
+    .modal_info div p:nth-child(3) {
+        font-size: 1.05rem;
+    }
+
+    .modal_info div p:nth-child(4) {
+        font-size: 1rem;
+    }
+
+}
+
+/* Ноутбуки и десктопы */
+@media only screen and (min-width: 1024px) and (max-width: 1390px) {
+    .info_left p {
+        margin-right: 2rem;
+    }
+
+    .about_first div:nth-child(1) {
+        row-gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_first div p {
+        width: 100%;
+    }
+
+    .about_first {
+        row-gap: 0;
+    }
+
+    .svg_border_about {
+        width: 100vw;
+    }
+
+    .podcasts_body__item {
+        width: 90%;
+        column-gap: 3.55rem;
+    }
+
+    /* MODAL WINDOWS */
+
+    .modal_info {
+        width: 45vw;
+        height: 65vh;
+    }
+
+    .modal_form {
+        width: 40vw;
+        height: 95vh;
+    }
+
+    .modal_form input, 
+    .modal_form textarea {
+        width: 70%;
+        height: 2.37rem;
+    }
+
+    .modal_form button {
+        width: 55%;
+        font-size: 0.92rem;
+    }
+
+    .modal_form div form div label {
+        width: 100%;
+    }
+
+    .modal_access {
+        width: 50vw;
+        height: 60vh;
+    }
+
+    .logoAP {
+        width: 11vw;
+    }
+
+}
+
+@media only screen and (min-width: 1390px) and (max-width: 1450px) {
+    
+    /* MODAL WINDOWS */
+
+    .modal_form {
+        height: 95vh;
+    }
+
+    .modal_form input, 
+    .modal_form textarea {
+        height: 2.3rem;
+    }
+
+    .modal_info {
+        height: 65vh;
+    }
+
+    .modal_access {
+        height: 60vh;
+    }
+}
