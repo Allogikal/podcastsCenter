@@ -1,5 +1,5 @@
 <?
-$confirm_password = 'IDK123';
+$confirm_password = 'paradigma';
 $check_password = $_POST['password'];
 
 if ($confirm_password === $check_password) {

@@ -17,6 +17,8 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
     <link rel="icon" href="./FAVICON.ico" type="image/x-icon">
     <!-- STYLES_CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- CONNECTED JQUERY-3.7.1.MIN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -133,7 +135,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
             </div>
             <div>
                 <select id="categorySelect">
-                    <option>sort by category..</option>
+                    <option value="all">sort by category..</option>
                     <? $tags_array = selectTags($PDO); ?>
                     <? foreach ($tags_array as $tag) :
                         echo '<option value="' . $tag['id'] . '">' . $tag['title'] . '</option>';
@@ -142,118 +144,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
                 <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate">
             </div>
         </div>
-        <div class="podcasts_body">
-
-            <? $podcasts_array = selectPodcasts($PDO);
-            $i = 0; ?>
-            <? foreach ($podcasts_array as $podcast) :
-                if ($i % 2 == 0) {
-                    echo '
-                    <div class="podcasts_body__item">
-                    <div>
-                        <h2>' . $podcast['title'] . '</h2>
-                        <p data-modalId="modalInfo' . $podcast['created_at'] . '" class="openModalInfo">@' . $podcast['name'] . ' ' . $podcast['surname'] . '</p>
-                        <p>' . $podcast['description'] . '</p>
-                        <p>' . date('F j, Y', $podcast['created_at']) . '</p>
-                    </div>
-                    <div class="screen_podcasts__item_target">
-                        <img class="imageClip" src="' . $podcast['image_file'] . '" alt="imagePodcast">
-                        <div>
-                            <!-- BUTTON FOR PLAY OR PAUSE OF CLICK() -->
-                            <svg class="screen_podcasts__item_play" width="46" height="52" viewBox="0 0 46 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="playPodcast" filter="url(#filter0_d_5_259)">
-                                    <path d="M42 22L4.5 43.6506L4.5 0.349365L42 22Z" fill="#9D8568" />
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d_5_259" x="0.5" y="0.349365" width="45.5" height="51.3013" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                        <feOffset dy="4" />
-                                        <feGaussianBlur stdDeviation="2" />
-                                        <feComposite in2="hardAlpha" operator="out" />
-                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5_259" />
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5_259" result="shape" />
-                                    </filter>
-                                </defs>
-                            </svg>
-                            <!-- <svg class="screen_podcasts__item_pause" width="41" height="30" viewBox="0 0 41 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0" y="10" width="5" height="10" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="5; 20; 5" dur="1s" keyTimes="0;0.5;1" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="9" y="5" width="5" height="20" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="10; 30; 10" dur="1s" keyTimes="0;0.5;1" begin="0.1s" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="18" y="0" width="5" height="30" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="20; 40; 20" dur="1s" keyTimes="0;0.5;1" begin="0.2s" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="27" y="5" width="5" height="20" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="10; 30; 10" dur="1s" keyTimes="0;0.5;1" begin="0.3s" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="36" y="10" width="5" height="10" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="5; 20; 5" dur="1s" keyTimes="0;0.5;1" begin="0.4s" repeatCount="indefinite" />
-                                </rect>
-                            </svg> -->
-                        </div>
-                    </div>
-                    </div>
-                    ';
-                } else {
-                    echo '
-                    <div class="podcasts_body__item reverse">
-                    <div>
-                        <h2>' . $podcast['title'] . '</h2>
-                        <p data-modalId="modalInfo' . $podcast['created_at'] . '" class="openModalInfo">@' . $podcast['name'] . ' ' . $podcast['surname'] . '</p>
-                        <p>' . $podcast['description'] . '</p>
-                        <p>' . date('F j, Y', $podcast['created_at']) . '</p>
-                    </div>
-                    <div class="screen_podcasts__item_target">
-                        <img class="imageClip" src="' . $podcast['image_file'] . '" alt="imagePodcast">
-                        <div>
-                            <!-- BUTTON FOR PLAY OR PAUSE OF CLICK() -->
-                            <svg class="screen_podcasts__item_play" width="46" height="52" viewBox="0 0 46 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="playPodcast" filter="url(#filter0_d_5_259)">
-                                    <path d="M42 22L4.5 43.6506L4.5 0.349365L42 22Z" fill="#9D8568" />
-                                </g>
-                                <defs>
-                                    <filter id="filter0_d_5_259" x="0.5" y="0.349365" width="45.5" height="51.3013" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                        <feOffset dy="4" />
-                                        <feGaussianBlur stdDeviation="2" />
-                                        <feComposite in2="hardAlpha" operator="out" />
-                                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5_259" />
-                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5_259" result="shape" />
-                                    </filter>
-                                </defs>
-                            </svg>
-                            <!-- <svg class="screen_podcasts__item_pause" width="41" height="30" viewBox="0 0 41 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0" y="10" width="5" height="10" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="5; 20; 5" dur="1s" keyTimes="0;0.5;1" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="9" y="5" width="5" height="20" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="10; 30; 10" dur="1s" keyTimes="0;0.5;1" begin="0.1s" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="18" y="0" width="5" height="30" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="20; 40; 20" dur="1s" keyTimes="0;0.5;1" begin="0.2s" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="27" y="5" width="5" height="20" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="10; 30; 10" dur="1s" keyTimes="0;0.5;1" begin="0.3s" repeatCount="indefinite" />
-                                </rect>
-                                <rect x="36" y="10" width="5" height="10" rx="2.5" fill="#9D8568">
-                                    <animate attributeName="height" values="5; 20; 5" dur="1s" keyTimes="0;0.5;1" begin="0.4s" repeatCount="indefinite" />
-                                </rect>
-                            </svg> -->
-                        </div>
-                    </div>
-                    </div>
-                    ';
-                }
-                $i++;
-            endforeach; ?>
-
-        </div>
+        <div id="searchResults" class="podcasts_body"></div>
     </section>
 
     <!-- VECTOR_DECORATE_SEARCH -->
@@ -267,7 +158,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
     <section id="section4" class="search">
         <p>Enter a phrase to search for a podcast or interviewer</p>
         <search role="search">
-            <input placeholder="SEARCH ..." type="search">
+            <input id="searchInput" autocomplete="off" placeholder="SEARCH ..." type="search">
             <img src="./assets/images/iconSearch.svg" alt="iconSearch">
         </search>
     </section>
@@ -285,9 +176,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
 
     <div id="modalBackground" class="modal_info__bg">
 
-        <? foreach ($podcasts_array as $podcast) :
-        echo ' <div id="modalInfo'.$podcast['created_at'].'" class="modal_info">
-            <img data-modalId="modalInfo' . $podcast['created_at'] . '" id="closeModalInfo" class="closeModalInfo" src="./assets/images/closeModalButton.svg" alt="closeModal">
+        <? $podcasts_array = selectPodcasts($PDO);
+        foreach ($podcasts_array as $podcast) :
+            echo ' <div id="modalInfo' . $podcast['id'] . '" class="modal_info">
+            <img data-modalId="modalInfo' . $podcast['id'] . '" id="closeModalInfo" class="closeModalInfo" src="./assets/images/closeModalButton.svg" alt="closeModal">
             <div>
                 <img src="./assets/images/imageForInterviewer.jpg" alt="imageInterviewer">
                 <h2>' . $podcast['name'] . ' ' . $podcast['surname'] . '</h2>
@@ -333,9 +225,13 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
 
     </div>
 
+    <!-- CONNECTED MODULES - INSERT GLOBAL -->
+    <script type="module" src="./assets/js/modules/slideShow.js"></script>
+    <script type="module" src="./assets/js/modules/searchSortModule.js"></script>
+
     <!-- MAIN SCRIPT.JS -->
     <script type="module" src="./assets/js/main.js"></script>
-    <script type="module" src="./assets/js/modules/slideShow.js"></script>
+
 </body>
 
 </html>
