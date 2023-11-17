@@ -28,11 +28,11 @@ try {
 
     $PDO->PDO->commit();
     $_SESSION['message'] = 'НОВЫЙ СОБЕСЕДНИК!';
+    header('Location: /adminPage02.php');
 } catch (PDOException $e) {
     $PDO->PDO->rollBack();
-    $_SESSION['message'] = "СБОЙ ТРАНЗАКЦИИ: " . $e->getMessage();
+    $_SESSION['message'] = "СБОЙ В СИСТЕМЕ!";
+    header('Location: /adminPage03.php');
 } finally {
     $PDO->PDO = null;
 }
-
-echo $_SESSION['message'];

@@ -26,25 +26,25 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
         </div>
         <ul>
             <li>
-                <a href="./adminPage01.php">create podcast</a>
+                <a href="./adminPage01.php">Создать подкаст</a>
                 <svg xmlns="http://www.w3.org/2000/svg" width="301" height="20" viewBox="0 0 301 20" fill="none">
                     <path d="M0 1H265.714L300 19" stroke="#9D8568" />
                 </svg>
             </li>
             <li>
-                <a href="./adminPage02.php">interviewers</a>
+                <a href="./adminPage02.php">Собеседники</a>
                 <svg xmlns="http://www.w3.org/2000/svg" width="301" height="20" viewBox="0 0 301 20" fill="none">
                     <path d="M0 1H265.714L300 19" stroke="#9D8568" />
                 </svg>
             </li>
             <li>
-                <a href="./adminPage03.php">applications</a>
+                <a href="./adminPage03.php">Заявки</a>
                 <svg xmlns="http://www.w3.org/2000/svg" width="301" height="20" viewBox="0 0 301 20" fill="none">
                     <path d="M0 1H265.714L300 19" stroke="#9D8568" />
                 </svg>
             </li>
             <li>
-                <a href="./adminPage04.php">podcasts</a>
+                <a href="./adminPage04.php">Подкасты</a>
                 <svg xmlns="http://www.w3.org/2000/svg" width="301" height="20" viewBox="0 0 301 20" fill="none">
                     <path d="M0 1H265.714L300 19" stroke="#9D8568" />
                 </svg>
@@ -54,12 +54,12 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
 
     <!-- SCREEN WITH TITLE -->
     <section class="screen">
-        <h1>podcasts</h1>
+        <h1>Подкасты</h1>
         <div class="screen_podcasts">
 
             <? $podcasts_array = selectPodcasts($PDO) ?>
             <? if (empty($podcasts_array)) : ?>
-                <h1 style="text-align: center; width: 80%;">Нет активных подкастов.</h1>
+                <h1 style="text-align: center; width: 80%;">Нет подкастов.</h1>
             <? else :
                 foreach ($podcasts_array as $podcast) :
                     echo '
@@ -91,6 +91,57 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
             <img src="./assets/images/closeModalButton.svg" alt="closeBttn">
             </div>
     </section>
+
+    <!-- -------------------------------------------------->
+    <!--                     DIALOG BOX                  -->
+    <!-- -------------------------------------------------->
+
+    <style>
+        .dialog_box {
+            font-size: 1.1rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.16875rem;
+            padding: 0 2rem;
+            top: 10%;
+            left: 5%;
+            position: fixed;
+            max-width: 30vw;
+            max-height: 4em;
+            border: 2px solid var(--text-special);
+            background: #0F0F0F;
+            box-shadow: 10px 10px var(--text-special);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+
+    <?
+    if (isset($_SESSION['message']) && !empty($_SESSION['message'])) {
+        $message = $_SESSION['message'];
+    ?>
+        <div class="dialog_box" id="dialogBox">
+            <p><? echo $message; ?></p>
+        </div>
+        <script>
+            let dialogBox = document.getElementById('dialogBox');
+            dialogBox.style.display = 'block';
+            setTimeout(() => {
+                dialogBox.style.opacity = 1;
+            }, 500);
+            setTimeout(() => {
+                dialogBox.style.opacity = 0;
+            }, 3000);
+            setTimeout(() => {
+                dialogBox.style.display = "none";
+            }, 4000);
+        </script>
+        <?
+        unset($_SESSION['message']);
+        ?>
+    <? } ?>
+
 </body>
 
 </html>

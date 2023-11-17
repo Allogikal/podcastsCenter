@@ -30,12 +30,12 @@ else {
         $statement3->execute();
         $PDO->PDO->commit();
         $_SESSION['message'] = 'НОВЫЙ ПОДКАСТ!';
+        header('Location: /adminPage04.php');
     } catch (PDOException $e) {
         $PDO->PDO->rollBack();
-        $_SESSION['message'] = "СБОЙ ТРАНЗАКЦИИ: " . $e->getMessage();
+        $_SESSION['message'] = "СБОЙ СОЗДАНИЯ: " . $e->getMessage();
+        header('Location: /adminPage01.php');
     } finally {
         $PDO->PDO = null;
     }
 }
-
-echo $_SESSION['message'];

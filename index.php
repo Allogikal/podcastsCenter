@@ -12,7 +12,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PARADIGMA - Modern Podcasts Center</title>
+    <title>PARADIGMA | Elizaveta Vihrova</title>
     <!-- FAVICON.ICO -->
     <link rel="icon" href="./FAVICON.ico" type="image/x-icon">
     <!-- STYLES_CSS -->
@@ -26,11 +26,11 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
     <header>
         <nav>
             <ul>
-                <li><a class="aElement" href="#section1">info</a></li>
-                <li><a class="aElement" href="#section2">about</a></li>
+                <li><a class="aElement" href="#section1">Инфо</a></li>
+                <li><a class="aElement" href="#section2">О нас</a></li>
                 <li><img src="./assets/images/logoImage.svg" alt="logoImage"></li>
-                <li><a class="aElement" href="#section3">podcasts</a></li>
-                <li><a class="aElement" href="#section4">search<sub>CTRL+F</sub></a></li>
+                <li><a class="aElement" href="#section3">Подкасты</a></li>
+                <li><a class="aElement" href="#section4">Поиск<sub>CTRL+F</sub></a></li>
             </ul>
         </nav>
     </header>
@@ -44,9 +44,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
     <!-- SECTION_INFO -->
     <article id="section1">
         <div class="info_left">
-            <h1>Lorem ipsum dolor sit <span>amet</span>, consectetur</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ......</p>
-            <button id="openModalForm">Submit application <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
+            <h1>Здесь мы открываемся новым идеям, расширяем свой <span>ум и душу</span>.</h1>
+            <p>Проект "ПАРАДИГМА" призван способствовать взаимопониманию и сотрудничеству между разными культурами, а также развивать толерантность и уважение к иным мировоззрениям. Пора отправляться в путешествие, где изменится ваше сознание.</p>
+            <button id="openModalForm">Прими участие <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
         </div>
         <div class="info_right">
             <img src="./assets/images/imageClip.jpg" alt="image">
@@ -63,46 +63,46 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
         <div class="about_first fade">
             <div>
                 <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ......</p>
+                <p>Привет, я создатель проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
             </div>
             <div>
-                <h1>Lorem <span>ipsum</span> dolor sit amet </h1>
-            </div>
-        </div>
-        <div class="about_first fade">
-            <div>
-                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ......</p>
-            </div>
-            <div>
-                <h1>Lorem <span>ipsum</span> dolor sit amet </h1>
+                <h1><span>Елизавета</span> Вихрова </h1>
             </div>
         </div>
         <div class="about_first fade">
             <div>
                 <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ......</p>
+                <p>Привет, я разработчик сайта проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
             </div>
             <div>
-                <h1>Lorem <span>ipsum</span> dolor sit amet </h1>
-            </div>
-        </div>
-        <div class="about_first fade">
-            <div>
-                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ......</p>
-            </div>
-            <div>
-                <h1>Lorem <span>ipsum</span> dolor sit amet </h1>
+                <h1><span>Лиса</span> (разработчик сайта) </h1>
             </div>
         </div>
         <div class="about_first fade">
             <div>
                 <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ......</p>
+                <p>Привет, я дизайнер сайта проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
             </div>
             <div>
-                <h1>Lorem <span>ipsum</span> dolor sit amet </h1>
+                <h1><span>Олеся</span> (дизайнер) </h1>
+            </div>
+        </div>
+        <div class="about_first fade">
+            <div>
+                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <p>Привет, я продюсер проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
+            </div>
+            <div>
+                <h1><span>Дарья</span> (продюсер) </h1>
+            </div>
+        </div>
+        <div class="about_first fade">
+            <div>
+                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <p>Привет, я пиар-менеджер проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
+            </div>
+            <div>
+                <h1><span>Элина</span> (PR-менеджер) </h1>
             </div>
         </div>
         <div class="about_second">
@@ -117,7 +117,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
             </div>
         </div>
         <div class="about_third">
-            <h1>Lorem ipsum dolor sit</h1>
+            <h1>Наша крутая команда.</h1>
         </div>
     </section>
 
@@ -130,12 +130,12 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
     <section id="section3" class="podcasts">
         <div class="podcasts_heading">
             <div>
-                <h1>Lorem ipsum dolor sit <span>amet elit</span></h1>
+                <h1>Услышь новое <span>восприятие</span></h1>
                 <img src="./assets/images/lineDecorate.svg" alt="lineDecorate">
             </div>
             <div>
                 <select id="categorySelect">
-                    <option value="all">sort by category..</option>
+                    <option value="all">Сортируй подкасты ..</option>
                     <? $tags_array = selectTags($PDO); ?>
                     <? foreach ($tags_array as $tag) :
                         echo '<option value="' . $tag['id'] . '">' . $tag['title'] . '</option>';
@@ -156,9 +156,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
 
     <!-- SECTION_SEARCH -->
     <section id="section4" class="search">
-        <p>Enter a phrase to search for a podcast or interviewer</p>
+        <p>Введи, чтобы услышать новое мнение</p>
         <search role="search">
-            <input id="searchInput" autocomplete="off" placeholder="SEARCH ..." type="search">
+            <input id="searchInput" autocomplete="off" placeholder="ПОИСК ..." type="search">
             <img src="./assets/images/iconSearch.svg" alt="iconSearch">
         </search>
     </section>
@@ -196,8 +196,8 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
                     <img class="logoAP" src="./assets/images/logoAdminPanel.svg" alt="logoForAdminPanel">
                 </div>
                 <form action="./app/controllers/accessToThePassword.php" method="POST">
-                    <input required placeholder="ACCESS PASSWORD" name="password" type="password">
-                    <button type="submit">get access <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
+                    <input required placeholder="ПАРОЛЬ ДОСТУПА" name="password" type="password">
+                    <button type="submit">получить доступ <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
                 </form>
             </div>
         </div>
@@ -209,21 +209,70 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
                     <img src="./assets/images/logoImage.svg" alt="logoForAdminPanel">
                 </div>
                 <form action="./app/controllers/createApplicationController.php" method="POST">
-                    <input required placeholder="YOUR NAME" type="text" name="name">
-                    <input required placeholder="YOUR SURNAME" type="text" name="surname">
-                    <input required placeholder="YOUR COUNTRY" type="text" name="country">
-                    <input required placeholder="YOUR EMAIL" type="email" name="email">
-                    <textarea required placeholder="TOPIC FOR DISCUSSION" name="description"></textarea>
-                    <button type="submit">submit <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
+                    <input required placeholder="ВАШЕ ИМЯ" type="text" name="name">
+                    <input required placeholder="ВАША ФАМИЛИЯ" type="text" name="surname">
+                    <input required placeholder="СТРАНА ПРОЖИВАНИЯ" type="text" name="country">
+                    <input required placeholder="ВАША ПОЧТА" type="email" name="email">
+                    <textarea required placeholder="ТЕМА ДЛЯ ОБСУЖДЕНИЯ" name="description"></textarea>
+                    <button type="submit">отправить <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
                     <div>
                         <input required id="checkPolicy" type="checkbox">
-                        <label for="checkPolicy">You agree to the site's <a href="#!" target="_blank">privacy policy</a></label>
+                        <label for="checkPolicy">Вы согласны с <a href="#!" target="_blank">политикой</a> сайта</label>
                     </div>
                 </form>
             </div>
         </div>
 
     </div>
+
+    <!-- -------------------------------------------------->
+    <!--                     DIALOG BOX                  -->
+    <!-- -------------------------------------------------->
+
+    <style>
+        .dialog_box {
+            font-size: 1.1rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.16875rem;
+            padding: 0 2rem;
+            top: 10%;
+            position: fixed;
+            max-width: 30vw;
+            max-height: 4em;
+            border: 2px solid var(--text-special);
+            background: #0F0F0F;
+            box-shadow: 10px 10px var(--text-special);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+
+    <?
+    if (isset($_SESSION['message']) && !empty($_SESSION['message'])) {
+        $message = $_SESSION['message'];
+    ?>
+        <div class="dialog_box" id="dialogBox">
+            <p><? echo $message; ?></p>
+        </div>
+        <script>
+            let dialogBox = document.getElementById('dialogBox');
+            dialogBox.style.display = 'block';
+            setTimeout(() => {
+                dialogBox.style.opacity = 1;
+            }, 500);
+            setTimeout(() => {
+                dialogBox.style.opacity = 0;
+            }, 3000);
+            setTimeout(() => {
+                dialogBox.style.display = "none";
+            }, 4000);
+        </script>
+        <?
+        unset($_SESSION['message']);
+        ?>
+    <? } ?>
 
     <!-- CONNECTED MODULES - INSERT GLOBAL -->
     <script type="module" src="./assets/js/modules/slideShow.js"></script>

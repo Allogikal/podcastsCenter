@@ -14,10 +14,9 @@ try {
     $statement = $PDO->PDO->prepare($query);
     $statement->execute();
     $_SESSION['message'] = 'НОВАЯ ЗАЯВКА!';
+    header('Location: /index.php');
 } catch (PDOException $e) {
-    $_SESSION['message'] = "СБОЙ В БД: " . $e->getMessage();
+    $_SESSION['message'] = "ЗАЯВКА НЕ СОЗДАНА";
 } finally {
     $PDO->PDO = null;
 }
-
-echo $_SESSION['message'];
