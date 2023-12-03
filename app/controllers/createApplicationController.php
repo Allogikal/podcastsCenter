@@ -13,10 +13,10 @@ try {
     $query = "INSERT INTO applications VALUES(NULL, '$name', '$surname', '$country', '$email', '$description')";
     $statement = $PDO->PDO->prepare($query);
     $statement->execute();
-    $_SESSION['message'] = 'НОВАЯ ЗАЯВКА!';
+    $_SESSION['message'] = 'ЗАЯВКА ОТПРАВЛЕНА!';
     header('Location: /index.php');
 } catch (PDOException $e) {
-    $_SESSION['message'] = "ЗАЯВКА НЕ СОЗДАНА";
+    $_SESSION['message'] = "ЗАЯВКА НЕ ОТПРАВЛЕНА!";
 } finally {
     $PDO->PDO = null;
 }

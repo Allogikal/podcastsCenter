@@ -16,10 +16,8 @@ if ($selectedCategory !== 'all') {
 }
 
 $results = array_filter($data, function ($item) use ($searchQuery) {
-    $titleMatch = stripos($item['title'], $searchQuery) !== false;
-    $nameMatch = stripos($item['name'], $searchQuery) !== false;
-    $surnameMatch = stripos($item['surname'], $searchQuery) !== false;
-    return $titleMatch || $nameMatch || $surnameMatch;
+    $titleMatch = stripos(strtolower($item['title']), strtolower($searchQuery)) !== false;
+    return $titleMatch;
 });
 
 echo json_encode(array_values($results));

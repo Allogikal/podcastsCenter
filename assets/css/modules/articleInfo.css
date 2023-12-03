@@ -31,6 +31,7 @@ article {
     text-transform: uppercase;
     cursor: pointer;
     margin-right: 4.06rem;
+    animation: slideInFromLeft .5s ease-in-out;
 }
 
 .info_left button:hover {
@@ -48,6 +49,7 @@ article {
     text-transform: uppercase;
     margin: 0;
     margin-right: 4.06rem;
+    animation: slideInFromLeft 1s ease-in-out;
 }
 
 .info_left p {
@@ -59,6 +61,7 @@ article {
     line-height: normal;
     letter-spacing: 0.16875rem;
     margin: 0;
+    animation: slideInFromLeft 1s ease-in-out;
 }
 
 .info_right {
@@ -75,4 +78,6 @@ article {
     background-repeat: no-repeat;
     box-shadow: 10px 10px var(--text-special);
     object-fit: cover;
+    animation: slideInFromRight 1s ease-in-out;
+    filter: brightness(70%);
 }

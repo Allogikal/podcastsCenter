@@ -72,7 +72,7 @@ function displayPodcasts(results) {
                                     </filter>
                                 </defs>
                             </svg>
-                            <svg class="screen_podcasts__item_pause" width="41" height="30" viewBox="0 0 41 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg style="display:none;" class="screen_podcasts__item_pause" width="41" height="30" viewBox="0 0 41 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0" y="10" width="5" height="10" rx="2.5" fill="#9D8568">
                                     <animate attributeName="height" values="5; 20; 5" dur="1s" keyTimes="0;0.5;1" repeatCount="indefinite" />
                                 </rect>
@@ -121,7 +121,7 @@ function displayPodcasts(results) {
                                     </filter>
                                 </defs>
                             </svg>
-                            <svg class="screen_podcasts__item_pause" width="41" height="30" viewBox="0 0 41 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg style="display:none;" class="screen_podcasts__item_pause" width="41" height="30" viewBox="0 0 41 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0" y="10" width="5" height="10" rx="2.5" fill="#9D8568">
                                     <animate attributeName="height" values="5; 20; 5" dur="1s" keyTimes="0;0.5;1" repeatCount="indefinite" />
                                 </rect>

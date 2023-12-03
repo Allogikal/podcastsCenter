@@ -22,18 +22,19 @@ else {
         $statement1 = $PDO->PDO->prepare($query1);
         $statement1->bindParam(':timestamp', $created_at, PDO::PARAM_INT);
         $statement1->execute();
-        $query2 = "INSERT INTO podcasts_interviewers VALUES (NULL, '$interviewer_id')";
+        $podcastId = $PDO->PDO->lastInsertId();
+        $query2 = "INSERT INTO podcasts_interviewers VALUES ('$podcastId', '$interviewer_id')";
         $statement2 = $PDO->PDO->prepare($query2);
         $statement2->execute();
-        $query3 = "INSERT INTO podcasts_tags VALUES (NULL, '$tag_id')";
+        $query3 = "INSERT INTO podcasts_tags VALUES ('$podcastId', '$tag_id')";
         $statement3 = $PDO->PDO->prepare($query3);
         $statement3->execute();
         $PDO->PDO->commit();
-        $_SESSION['message'] = 'НОВЫЙ ПОДКАСТ!';
+        $_SESSION['message'] = 'ДОБАВЛЕН ПОДКАСТ!';
         header('Location: /adminPage04.php');
     } catch (PDOException $e) {
         $PDO->PDO->rollBack();
-        $_SESSION['message'] = "СБОЙ СОЗДАНИЯ: " . $e->getMessage();
+        $_SESSION['message'] = "ПОДКАСТ НЕ ДОБАВЛЕН! " . $e->getMessage();
         header('Location: /adminPage01.php');
     } finally {
         $PDO->PDO = null;

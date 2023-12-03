@@ -69,7 +69,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectInterviewersControll
                             <p>' . $interviewer['country'] . '</p>
                         </div>
                         <div>
-                            <img src="./assets/images/imageForInterviewer.jpg" alt="imageClip">
+                            <img src="' . $interviewer['image'] . '" alt="imageClip">
                         </div>
                     </div>
                     ';

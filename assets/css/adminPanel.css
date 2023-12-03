@@ -244,10 +244,9 @@ input[type="file"] {
 
 .screen_interviewers {
   height: 74.55%;
-  padding: 3rem 2rem 3rem 0;
+  padding: 3rem 3rem 3rem 1rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
   border: 0.5px solid #9d8568;
   box-shadow: 5px 5px 0px #9d8568;
@@ -310,10 +309,9 @@ input[type="file"] {
 
 .screen_applications {
   height: 70%;
-  padding: 4rem 2rem 4rem 0;
+  padding: 4rem 3rem 4rem 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
   border: 0.5px solid #9d8568;
   box-shadow: 5px 5px 0px #9d8568;
@@ -433,10 +431,9 @@ input[type="file"] {
 
 .screen_podcasts {
   height: 70%;
-  padding: 4rem 2rem 4rem 0;
+  padding: 4rem 2rem 4rem 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: column;
   border: 0.5px solid #9d8568;
   box-shadow: 5px 5px 0px #9d8568;
@@ -463,7 +460,7 @@ input[type="file"] {
 
 .screen_podcasts__item div:nth-child(2) p {
   margin: 0;
-  width: 75%;
+  width: 90%;
   text-align: right;
   font-size: 1rem;
   font-style: normal;
@@ -488,7 +485,7 @@ input[type="file"] {
 }
 
 .screen_podcasts__item div:nth-child(1) div:nth-child(1) h3 {
-  font-size: 1.75rem;
+  font-size: 1.45rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;

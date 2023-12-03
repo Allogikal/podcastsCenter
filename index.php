@@ -38,7 +38,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
     <!-- FIXED SCROLL_DOWN -->
     <div class="scroll_down">
         <img src="./assets/images/arrowScrollDown.svg" alt="scrollDown">
-        <p>scroll down</p>
+        <p>Листай ниже</p>
     </div>
 
     <!-- SECTION_INFO -->
@@ -49,7 +49,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
             <button id="openModalForm">Прими участие <img src="./assets/images/arrowDecorate.svg" alt="arrowDecorate"></button>
         </div>
         <div class="info_right">
-            <img src="./assets/images/imageClip.jpg" alt="image">
+            <img src="./assets/images/imageForArticle.jpg" alt="image">
         </div>
     </article>
 
@@ -62,7 +62,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
     <section id="section2" class="about">
         <div class="about_first fade">
             <div>
-                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <img src="./assets/images/imageAbout4.jpeg" alt="imageDeveloper">
                 <p>Привет, я создатель проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
             </div>
             <div>
@@ -71,7 +71,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
         </div>
         <div class="about_first fade">
             <div>
-                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <img src="./assets/images/imageAbout1.jpeg" alt="imageDeveloper">
                 <p>Привет, я разработчик сайта проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
             </div>
             <div>
@@ -80,7 +80,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
         </div>
         <div class="about_first fade">
             <div>
-                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <img src="./assets/images/imageAbout3.jpeg" alt="imageDeveloper">
                 <p>Привет, я дизайнер сайта проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
             </div>
             <div>
@@ -89,7 +89,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
         </div>
         <div class="about_first fade">
             <div>
-                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <img src="./assets/images/imageAbout2.jpeg" alt="imageDeveloper">
                 <p>Привет, я продюсер проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
             </div>
             <div>
@@ -98,7 +98,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
         </div>
         <div class="about_first fade">
             <div>
-                <img src="./assets/images/imageClip.jpg" alt="imageDeveloper">
+                <img src="./assets/images/imageAbout5.jpeg" alt="imageDeveloper">
                 <p>Привет, я пиар-менеджер проекта. Если ты попал сюда, то тебе крупно повезло, ведь здесь мы меняем ваше восприятие. Наши подкасты, созданные в рамках проекта, позволяют иностранцам высказаться и поделиться своими уникальными взглядами на российскую культуру, традиции и обычаи. Скорее переходи к прослушиванию, сломай свою парадигму!</p>
             </div>
             <div>
@@ -181,7 +181,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/selectPodcastsController.p
             echo ' <div id="modalInfo' . $podcast['id'] . '" class="modal_info">
             <img data-modalId="modalInfo' . $podcast['id'] . '" id="closeModalInfo" class="closeModalInfo" src="./assets/images/closeModalButton.svg" alt="closeModal">
             <div>
-                <img src="./assets/images/imageForInterviewer.jpg" alt="imageInterviewer">
+                <img src="' . $podcast['image'] . '" alt="imageInterviewer">
                 <h2>' . $podcast['name'] . ' ' . $podcast['surname'] . '</h2>
                 <p>' . $podcast['email'] . '</p>
                 <p>' . $podcast['country'] . '</p>

@@ -27,11 +27,11 @@ try {
     $statement->execute();
 
     $PDO->PDO->commit();
-    $_SESSION['message'] = 'НОВЫЙ СОБЕСЕДНИК!';
+    $_SESSION['message'] = 'ДОБАВЛЕН СОБЕСЕДНИК!';
     header('Location: /adminPage02.php');
 } catch (PDOException $e) {
     $PDO->PDO->rollBack();
-    $_SESSION['message'] = "СБОЙ В СИСТЕМЕ!";
+    $_SESSION['message'] = "СОБЕСЕДНИК НЕ ДОБАВЛЕН!";
     header('Location: /adminPage03.php');
 } finally {
     $PDO->PDO = null;
